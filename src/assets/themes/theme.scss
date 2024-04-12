@@ -1,0 +1,15 @@
+@use "@angular/material" as mat;
+
+@import "./clientA.scss";
+@import "./clientB.scss";
+@import "./clientC.scss";
+
+.client-a {
+    @include mat.all-component-themes($client-a);
+}
+.client-b {
+    @include mat.all-component-themes($client-b);
+}
+.client-c {
+    @include mat.all-component-themes($client-c);
+}

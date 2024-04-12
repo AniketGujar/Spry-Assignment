@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    height: 75px;
+}
+
+.custom-form-field {
+    align-self: baseline;
+    .mat-form-field {
+        width: 140px;
+        font-size: 14px;
+    }
+    .mat-form-field-wrapper {
+        padding: 0px;
+    }
+    .mat-form-field-infix {
+        height: 24px;
+    }
+}

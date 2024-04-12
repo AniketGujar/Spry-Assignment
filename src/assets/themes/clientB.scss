@@ -1,0 +1,23 @@
+@include mat.core();
+
+$grey: #D3D3D3;
+$primary-text: #fff;
+$green : green;
+
+$green-palette: (
+    50: $green,
+    900:$grey,
+    contrast: (
+        50: $primary-text
+    )
+);
+
+$primary-b: mat.define-palette($green-palette, 50);
+$accent-b: mat.define-palette($green-palette,900);
+
+$client-b: mat.define-light-theme((
+ color: (
+   primary: $primary-b,
+   accent: $accent-b
+ )
+));

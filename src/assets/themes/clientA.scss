@@ -1,0 +1,26 @@
+@include mat.core();
+
+$blue: blue;
+$white: #fff;
+$dark-primary-text: rgba(0, 0, 0, 0.87);
+
+$blue-palette: (
+  50: $white,
+  900: $blue,
+  contrast: (
+    50: $dark-primary-text,
+    900: $white
+  )
+);
+
+$primary-a: mat.define-palette($blue-palette, 900, 900, 900);
+$accent-a: mat.define-palette($blue-palette, 50);
+
+$client-a: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary-a,
+      accent: $accent-a
+    )
+  )
+);

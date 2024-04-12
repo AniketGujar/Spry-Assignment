@@ -1,0 +1,27 @@
+@include mat.core();
+
+$red: red;
+$biege: #f5f5dc;
+$white: white;
+$dark-primary-text: rgba(0, 0, 0, 0.87);
+
+$red-biege-palette: (
+  50: $biege,
+  900: $red,
+  contrast: (
+    50: $dark-primary-text,
+    900: $white
+  )
+);
+
+$primary-c: mat.define-palette($red-biege-palette, 900);
+$accent-c: mat.define-palette($red-biege-palette, 50);
+
+$client-c: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary-c,
+      accent: $accent-c
+    )
+  )
+);

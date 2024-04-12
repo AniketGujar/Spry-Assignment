@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span>Spry Health</span>
+    <span class="example-spacer"></span>
+
+    <div class="custom-form-field">
+        <mat-form-field appearance="outline" class="m-2">
+            <mat-label>Select clients</mat-label>
+            <mat-select [(ngModel)]="selectedClient" (selectionChange)="updateClient()">
+                <mat-option *ngFor="let client of clientsList" [value]="client">{{client}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-toolbar>
